@@ -1,0 +1,352 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.font-Manrope{
+    font-family: 'Manrope';
+}
+html{
+    background-color: #F6F7F8;
+}
+#dashboard-container{
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-family: 'Manrope';
+    font-size: 14px;
+    justify-content: center;
+}
+.dashboard-content-container{
+    display: flex;
+    justify-content:space-around;
+}
+.dashboard-content-container .mid-col{
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-content-container .right-col{
+    display: flex;
+    flex-direction: column;
+}
+#nav-bar-container, .navigation-btn-group,.doctor-profile {
+    display: flex;
+    padding: 5px;
+    font-weight: bold;
+}
+#nav-bar-container{
+    align-items: center;
+    justify-content:space-around;
+    background-color: #fff;
+    border-radius: 70px;
+    margin-bottom: 20px;
+}
+.navigation-btn-group div{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+.navigation-btn-group div img{
+    margin-right: 10px;
+}
+.navigation-btn-group .active-category{
+    background-color: #01F0D0;
+    border-radius: 41px;
+    padding: 10px 15px;
+}
+.doctor-profile .settingImg{
+    margin-right: 20px;
+}
+.doctor-profile .user-details{
+    text-align: left;
+    margin: 0px 20px 0px 10px;
+    padding-right: 10px;
+    border-right: 1px #F6F7F8 solid;
+}
+.user-details .user-title{
+    font-weight:lighter;
+    color:#707070;
+}
+
+/* Patients Seacrh Area */
+.patients-container{
+    background-color: #fff;
+    border-radius: 16px ;
+    min-width: 367px; 
+    height: 1020px; /* adjust */
+}
+.patients-container .title-area,
+.patients-container .patient,
+.patients-container .patient div{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.patients-container .patient-list{
+    height:90%;
+    overflow-y: scroll;
+}
+.title-area{
+    padding: 20px;
+}
+.title-area p{
+    font-weight: bold;
+    font-size: 24px;
+}
+.patients-container .patient{
+    margin-top: 20px;
+}
+.patient.active-patient{
+    background-color: #D8FCF7;
+}
+.patients-container .patient div{
+    padding: 10px;
+}
+.patient .moreHIcon{
+    padding-right: 20px;
+}
+.patients-container .patient div .patient-img{
+    width: 50px;
+    margin-right: 10px;
+}
+.patient-list .patient .patient-info{
+    flex-direction: column;
+    white-space: nowrap;   
+    align-items: self-start;
+}
+.patient-info p{
+    font-weight: bold;
+}
+.patient-info p + p{
+    color: #707070;
+}
+/* Diagnosis History */
+.diagnosis-container{
+    background-color: #fff;
+    border-radius: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    min-width: 766px; 
+}
+.diagnosis-container .diagnosis-title{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.charts-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.blood-pressure-graph-container{
+    background-color: #F4F0FE;
+    border-radius: 12px;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    width: 100%;
+    height: 300px; /* temp -  for visual rough */
+    margin-bottom: 20px;
+    border-radius: 12px;
+    
+    display: flex;
+}
+.blood-pressure-graph-container .bp-info-left{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 20px;
+}
+.bp-info-left div div img{
+    margin-left: 10px;
+}
+.blood-pressure-graph-container .bp-number{
+    font-weight: bold;
+    font-size: 22px;
+}
+.bp-type, .bp-number, .bp-info-right div{
+    margin-bottom: 10px;
+}
+.bp-info-right div:first-of-type{
+    margin-bottom: 30px;
+}
+.bp-info-left div{
+    display: flex;
+    justify-content: space-between;
+}
+.bp-info-left .bp-chart-title{
+    font-weight: bold;
+}
+.bp-info-right{
+    width: 30%;
+    padding: 20px;
+}
+.bp-info-right div{
+    display: flex;
+}
+.bp-info-right div img{
+    margin-right: 10px;
+}
+
+.respiratory-info{
+    background-color: #E0F3FA;
+    border-radius: 12px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin-right: 20px;
+}
+.temperature-info{
+    background-color: #FFE6E9;
+    border-radius: 12px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-right: 20px;
+}
+.heart-rate-info{
+    background-color: #FFE6F1;
+    border-radius: 12px;
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+.heart-rate-info div{
+    display: flex;
+}
+.respiratory-info, .temperature-info, .heart-rate-info{
+    padding: 15px;
+    text-align: left;
+}
+.respiratory-info .bpm, .temperature-info .temp, .heart-rate-info .heart-rate{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.info-title{
+    font-size: 16px;
+}
+.level{
+    font-size: 14px;
+}
+.heart-rate-info div img{
+ margin-right: 10px;
+}
+
+/* Patient Profile */
+.patient-profile-container{
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+
+    min-width: 367px; 
+}
+.patient-profile-info div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.patient-profile-info div:first-child p{
+    font-weight: bold;
+    font-size: 24px;
+}
+.patient-profile-info div{
+    display: flex;
+    align-items: center;
+
+}
+.patient-profile-info div img{
+    margin: 10px;
+}
+.patient-profile-info div div{
+    flex-direction: column;
+    align-items: self-start;
+}
+.patient-profile-info div div p + p{
+    font-weight: bold;
+}
+.all-info-btn{
+    background-color: #01F0D0;
+    border: none;
+    border-radius: 41px;
+    width: 50%;
+    padding: 10px 20px;
+    align-self: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+/* diagnostic list */
+#diagnosticList-container{
+    background-color: #fff;
+    border-radius: 16px;
+    grid-column: 2/3;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    height: 350px;
+}
+.list-container{
+    height: 80%;
+    overflow-y: scroll; 
+}
+.section-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+table{
+    width: 100%;
+    border-collapse: separate;
+    text-align: left;
+}
+table tr th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 10px 0px;
+    background-color: #F6F7F8;
+    padding-left: 20px;
+}
+table tr th:first-child{
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+table tr th:last-child{
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+table tr td{
+    padding: 25px 0px;
+    padding-left: 20px;
+    border-bottom: 1px #F6F7F8 solid;
+}
+/* lab results */
+.labResults-container{
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    height: 295px;
+}
+.labResults-container .lab-title{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.result{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* margin-bottom: 20px; */
+}
+.results-container{
+    height: 75%;
+    overflow-y: scroll;
+}
+.result:hover{
+    background-color: #F6F7F8;
+}
