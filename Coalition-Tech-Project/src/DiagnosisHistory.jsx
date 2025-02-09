@@ -108,19 +108,20 @@ export default function DiagnosisHistory(){
                             </div>
                             <Line options={options} data={data}/>
                         </div>
+                        {/* TODO: sync with data [Higher than avg text ]*/}
                         <div className="bp-info-right">
                             <p className="bp-type">Systolic</p>
                             <p className="bp-number">{vitalData[0]?.blood_pressure?.systolic?.value}</p>
                             <div>
                                 <img src={arrowUpIcon}/>
-                                <p>Higher than Average</p>
+                                <p>{vitalData[0]?.blood_pressure?.systolic?.levels}</p>
                             </div>
                         
                             <p className="bp-type">Diastolic</p>
                             <p className="bp-number">{vitalData[0]?.blood_pressure?.diastolic?.value}</p>
                             <div>
                                 <img src={arrowDownIcon}/>
-                                <p>Lower than Average</p>
+                                <p>{vitalData[0]?.blood_pressure?.diastolic?.levels}</p>
                             </div>
                         </div>
                     </div>
